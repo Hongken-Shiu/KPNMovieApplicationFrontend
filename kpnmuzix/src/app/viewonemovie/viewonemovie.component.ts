@@ -176,7 +176,7 @@ export class ViewonemovieComponent implements OnInit {
 
   openTrailer(): void {
     const formattedTitle = this.selectedMovieData.title.replace(/\s/g, '+');
-    const apiKey = 'AIzaSyAVs-E6XU_LB4Oc7irnaChGsZAFcH9hWWc';
+    const apiKey = 'use_Your_Own_API_Key_Here';
     const apiUrl = `https://www.googleapis.com/youtube/v3/search?q=${formattedTitle}+trailer&type=video&key=${apiKey}`;
 
     this.http.get(apiUrl).subscribe((response: any) => {
