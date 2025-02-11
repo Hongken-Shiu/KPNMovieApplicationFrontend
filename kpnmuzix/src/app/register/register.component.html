@@ -1,0 +1,112 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <form [formGroup]="RegistrationForm" (ngSubmit)="OnRegister()">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"
+                                style="font-weight:bolder;font-size: x-large; margin-left: 230px;"><b>REGISTRATION</b>
+                            </h3>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="Name">NAME</label>
+                                        <input type="text" formControlName="userName"
+                                            class="form-control form-control-lg" />
+                                    </div>
+                                    <span class="text-danger" *ngIf="getUserName.invalid && getUserName.touched ">Valid
+                                        Name is Required with alphabets</span>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="Email">EMAIL ID</label>
+                                        <input type="text" class="form-control form-control-lg"
+                                            formControlName="email" />
+                                    </div>
+                                    <span class="text-danger" *ngIf="getEmail.invalid && getEmail.touched ">Valid Email
+                                        Is Required, </span>
+                                    <span class="text-danger" *ngIf="getEmail.invalid && getEmail.dirty ">This Email Is
+                                        Invalid</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="Password">PASSWORD</label>
+                                        <input type="password" formControlName="password"
+                                            class="form-control form-control-lg" />
+                                    </div>
+                                    <span class="text-danger"
+                                        *ngIf="(getPassword.errors?.['minlength'] && getPassword.errors?.['maxlength']) || (getPassword.invalid && getPassword.touched) ">Minimum
+                                        4 & Maximum 12 Character's Required</span>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="confirm Password">CONFIRM PASSWORD</label>
+                                        <input type="password" formControlName="confirmPassword"
+                                            class="form-control form-control-lg" />
+                                    </div>
+                                    <span class="text-danger"
+                                        *ngIf="getConfirmPassword.invalid && getConfirmPassword.touched ">Confirm
+                                        Password Is Required </span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="mobile">MOBILE NUMBER</label>
+
+                                    </div>
+
+
+                                    <input type="text" formControlName="phoneNumber"
+                                        class="form-control form-control-lg" />
+                                    <span class="text-danger"
+                                        *ngIf="getPhoneNumber.hasError('pattern') && (getPhoneNumber.dirty || getPhoneNumber.touched) && !getPhoneNumber.hasError('required')">10
+                                        digits required</span>
+                                    <span class="text-danger"
+                                        *ngIf="getPhoneNumber.hasError('required') && (getPhoneNumber.dirty || getPhoneNumber.touched)">
+                                        Invalid mobile pattern</span>
+                                </div>
+                                <div class="col-md-6 mb-4 form-outline">
+                                    <label style="margin-left: 2px;" class="form-label" for="gender">SELECT
+                                        GENDER</label>
+                                    <select style="height: 45px;" formControlName="gender"
+                                        class="form-control form-control-lg">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <span class="text-danger" *ngIf="getGender.invalid && getGender.touched ">Gender Is
+                                        Required </span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <p>UPLOAD IMAGE</p>
+                                <input #fileInput type="file" (change)="onFileChange()" style="display:none;">
+                                <button type="button" (click)="fileInput.click()">Select File</button><br>
+                                <span class="tooltiptext">Image should be .jpg or .png files</span>
+                            </div>
+                            <div class="mt-4 pt-2">
+                                <button class="btn btn-primary btn-lg" type="submit"
+                                    [disabled]="!RegistrationForm.valid">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- <button class="btn btn-primary btn-lg " type="submit " [disabled]="!isImageUploaded" (click)="OnRegister()">Register</button> -->
+<!-- [disabled]="!RegistrationForm.valid ">Register</button>  -->
+
+<!-- <button class="btn btn-primary btn-lg" type="submit" [disabled]="!RegistrationForm.valid"
+    [ngClass]="{'btn-ash': !RegistrationForm.valid, 'btn-primary': RegistrationForm.valid}">Register</button> -->

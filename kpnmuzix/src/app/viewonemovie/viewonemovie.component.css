@@ -1,0 +1,37 @@
+mat-card-subtitle{
+ margin-left: 20px;
+ color: black;
+  }
+  mat-card-title{
+    color: cadetblue;
+    font-weight: bold;
+  }
+  .cardContent {
+  
+    background:#FFFAFA;
+    color: white;
+    
+    font-size: 40%;
+
+  }
+.trailer-button {
+  background-color: #ffcccc; 
+  color: indigo; 
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px; 
+  font-family: Arial, sans-serif; 
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px; 
+  position: absolute; 
+  top: 75%;
+  right:140px; 
+  transform: translateY(-50%); 
+}
+.trailer-button:hover {
+  background-color: #fa8686;
+}
+.red-icon {
+  color: red !important;
+}

@@ -1,0 +1,32 @@
+<!-- <div class="recommended-movies">
+    <h2>Recommended Movies</h2>
+    <div class="movie-list">
+      <div class="movie-card" *ngFor="let movie of recommendedMovies">
+        <img class="movie-poster" [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w500/' + movie.poster_path : 'placeholder.jpg'" alt="{{ movie.title }}">
+        <div class="movie-details">
+          <h3>{{ movie.title }}</h3>
+          <p>Release Year: {{ movie.release_date}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+   <section class="vh-900 gradient-custom">  
+   <div class="recommended-movies"> 
+    <div class="head">
+      <h2 class="heading" style=" font-family: Arial, Helvetica, sans-serif; font-size: x-large; font-weight: bold;">MOST RECOMMENDED</h2>
+    </div>
+    <div class="movie-list" style="display: flex; flex-wrap: wrap;">
+      <div class="movie-card" *ngFor="let movie of recommendedMovies; let i = index"(click)="viewMovie(movie)">
+        <img class="movie-poster" [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w500/' + movie.poster_path : 'placeholder.jpg'" alt="{{ movie.title }}">
+        <div class="movie-details">
+          <h3 style="font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white;">{{ movie.title }}</h3>
+          <p>Release Year:{{ movie.release_date }}</p>
+        </div>
+        <div class="movie-actions" *ngIf="i % 4 === 3">
+          <!-- Add any actions you want to display here, such as "Load More" or "See All" buttons -->
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>

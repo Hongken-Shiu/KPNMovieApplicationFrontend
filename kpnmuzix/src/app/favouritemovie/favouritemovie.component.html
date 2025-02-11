@@ -1,0 +1,48 @@
+<section class="vh-900 gradient-custom"> 
+  <div class="head">
+  <h2 class="heading" style=" font-family: Arial, Helvetica, sans-serif; font-size: x-large; font-weight: bold;">MY FAVOURITES</h2>
+  </div> 
+<div class="container m-6">
+    <div class="row" *ngIf="favouriteMovieData && favouriteMovieData.length > 0; else noMoviesMessage">
+        <div class="col-md-3 mb-3" *ngFor="let item of favouriteMovieData;let i=index">
+            <mat-card class="example-card card-spacing">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div> 
+                    <mat-card-title>{{item?.title}}</mat-card-title>
+                    <mat-card-subtitle>{{item?.release_date}}</mat-card-subtitle>
+
+                    <!-- <a mat-icon-button [routerLink]="['/view-one-movie', item.id]"> <mat-icon>more_vert</mat-icon></a> -->
+                    <!-- <mat-menu #menu="matMenu" xPosition="before">
+              <a mat-menu-item [routerLink]="'viewonemovie' + item?.id">ViewMovie</a>
+            </mat-menu>  -->
+                </mat-card-header> 
+                <img mat-card-image [routerLink]="['/view-one-movie', item.id]" routerLinkActive="active"
+                    src="https://image.tmdb.org/t/p/w300{{item?.poster_path}}" alt="{{item?.title}}">
+                <!-- <mat-card-content class="content">
+      <p class="overview">{{item?.overview}}</p>
+    </mat-card-content> -->
+                <!-- <mat-menu #menu="matMenu" xPosition="before"> 
+    </mat-menu> -->
+                <!-- <mat-card-actions>
+            <button mat-icon-button color="primary" (click)="toggleLike(item)">
+              <mat-icon [ngClass]="{'red-icon': item.liked}" color="primary">favorite</mat-icon>
+            </button>
+  
+          </mat-card-actions> -->
+            </mat-card>
+        </div>
+        <!-- <div style="display: flex; justify-content: center; margin: 20px 0;">
+        <button [disabled]="currentPg<=1" (click)="decreasePage()" mat-raised-button class="prev-next-btn">
+          <mat-icon>navigate_before</mat-icon> PREVIOUS PAGE </button>
+        <button [disabled]="currentPg>=this.totalPages" (click)="increasePage()" mat-raised-button
+          class="prev-next-btn">NEXT PAGE <mat-icon>navigate_next</mat-icon>
+        </button>
+      </div> -->
+    </div>
+    <ng-template #noMoviesMessage>
+      <div class="col-md-12 no-movies-message">
+        <p>You don't have any favorite movies selected.</p>
+      </div>
+    </ng-template>
+</div>
+</section>

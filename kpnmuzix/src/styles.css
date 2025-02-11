@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header {
+    background-color: #007bff; /* Blue header background color */
+    color: #fff; /* White text color */
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  button {
+    background-color: #fff; /* White button background color */
+    color: #007bff; /* Blue button text color */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode {
+    background-color: #333; /* Dark background color */
+    color: #ddd; /* Light text color */
+  }
+  
+  .dark-mode header {
+    background-color: #333; /* Dark header background color */
+    color: #ddd; /* Light text color */
+  }
+  
+  .dark-mode button {
+    background-color: #ddd; /* Light button background color */
+    color: #333; /* Dark button text color */
+  }
+  

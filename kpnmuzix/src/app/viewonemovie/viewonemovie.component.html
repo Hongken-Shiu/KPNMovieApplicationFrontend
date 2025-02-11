@@ -1,0 +1,44 @@
+<div id="infoCard">
+    <div class="row" style="margin-top: 75px; margin-bottom: 75px;">
+      <div class="col">
+        <mat-card class="example-card movie-img">
+          <img mat-card-image src="https://image.tmdb.org/t/p/w300{{selectedMovieData.poster_path}}"style="height: 600px;">
+        </mat-card>
+      </div>
+      <div class="col content" style="margin-top: 80px;">
+        <mat-card class="cardContent" style="height: 480px;">
+          <mat-card-title style="font-size: 30px; padding-top: 40px; text-align: center;">
+            {{selectedMovieData.title}}
+          </mat-card-title>
+          <br>
+ 
+          <mat-card-subtitle style="font-size: 20px;">RELEASED:&nbsp;&nbsp;&nbsp;
+            {{selectedMovieData.release_date}}
+          </mat-card-subtitle>
+          <br>
+          <mat-card-subtitle style="font-size: 15px;">DESCRIPTION:&nbsp;&nbsp;&nbsp;
+            {{selectedMovieData.overview}}
+          </mat-card-subtitle>
+          <br>
+          <mat-card-subtitle>VOTE_AVERAGE: &nbsp;&nbsp;&nbsp; {{selectedMovieData.vote_average}}
+          </mat-card-subtitle>
+          <br>
+          <mat-card-subtitle>VOTE_COUNT:&nbsp;&nbsp;&nbsp; {{selectedMovieData.vote_count}}
+          </mat-card-subtitle>
+          <br>
+          <mat-card-subtitle>POPULARITY:&nbsp;&nbsp;&nbsp; {{selectedMovieData.popularity}}
+        </mat-card-subtitle>
+        <br>
+        <mat-card-subtitle>LANGUAGE:&nbsp;&nbsp;&nbsp; {{selectedMovieData.original_language}}
+        </mat-card-subtitle><br>
+        <mat-card-actions>
+          <button mat-icon-button color="white" (click)="toggleLike(selectedMovieData)">
+            <mat-icon [ngClass]="{'red-icon': selectedMovieData.liked}" color="white">favorite</mat-icon>
+          </button>
+        </mat-card-actions> 
+        <button mat-raised-button color="primary" class="trailer-button" (click)="openTrailer()">Watch Trailer</button>
+        <br>
+        </mat-card>
+      </div>
+    </div>
+  </div>

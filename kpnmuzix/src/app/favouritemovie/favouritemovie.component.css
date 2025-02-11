@@ -1,0 +1,34 @@
+
+
+  .card-spacing {
+  margin: 10px;
+}
+.heading
+{
+  padding-top: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 10px;
+}
+.head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  color:black;
+}
+.no-movies-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+}
+
+.no-movies-message p {
+  color: rgb(81, 29, 70); 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 1.8em; 
+  font-weight: bolder;
+  padding: 180px 0px 685px 0px;
+}

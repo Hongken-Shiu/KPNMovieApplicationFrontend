@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <img src="../../assets/logo5.png" width="80px" height="60px">
+      <a class="navbar-brand mx-5"  *ngIf="!IsloggedIn" routerLink="" style="font-size: x-large; font-weight: bolder;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">KPN MUZIX APP</a>
+      
+      <a class="navbar-brand mx-5"  *ngIf="IsloggedIn" routerLink="/dashboard" style="font-size: xx-large; font-weight: bolder;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">KPN MUZIX APP</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+      <div class="collapse navbar-collapse " id="navbarNav">
+        
+        <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item " *ngIf="IsloggedIn" routerLink="/dashboard" >
+            <a class="nav-link"style="color: white;">DASHBOARD</a>
+          </li> -->
+          <li class="nav-item" *ngIf="!IsloggedIn"> 
+            <a class="nav-link" routerLink="/register" routerLinkActive="active" style="margin-left: 650px; color: white;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;">REGISTER</a>
+          </li>
+          <li class="nav-item" *ngIf="!IsloggedIn">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active" style="color: white;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;">LOGIN</a>
+          </li>
+          <li class="nav-item" *ngIf="IsloggedIn">
+            <a class="nav-link" routerLink="recommended" routerLinkActive="active" style="color: white; font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;">RECOMMENDED</a>
+          </li> 
+          <li class="nav-item" *ngIf="IsloggedIn">
+            <a class="nav-link" routerLink="view-favourite-list" routerLinkActive="active" style="color: white; font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;">FAVOURITES</a>
+          </li> 
+          <!-- <li class="nav-item" *ngIf="IsloggedIn">
+            <a class="nav-link" (click)="logout()"style="color: white; margin-left:550px"><mat-icon>exit_to_app</mat-icon></a>
+          </li> -->
+          <!-- <li class="nav-item" *ngIf="IsloggedIn">
+            <a class="nav-link" routerLink="recommended" routerLinkActive="active">R</a>
+          </li> -->
+          <!-- <li class="nav-item" style="margin-left: 450px;">
+            <select [(ngModel)]="selectedLanguage" (change)="changeLanguage($event)">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="it">Italian</option>
+              <option value="sp">Spanish</option>
+            </select>
+          </li>  --> 
+          <!-- <li class="nav-item" style="margin-left: 540px;">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>brightness_3</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="('dark')">Dark</button>
+              <button mat-menu-item (click)="('light')">Light</button>
+              <button mat-menu-item (click)="('default')">Default</button>
+            </mat-menu>
+          </li> -->
+          <li class="nav-item" *ngIf="IsloggedIn">
+            <span class="nav-link logout-container" (click)="logout()" style="color: white; margin-left: 550px;">
+              <mat-icon>power_settings_new</mat-icon>
+              <span class="logout-text" style="font-style: italic;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;">LOGOUT</span>
+            </span>
+          </li>
+          <li><app-theme-toggle></app-theme-toggle></li>
+        </ul>
+      </div>
+       
+    </div>
+  </nav>

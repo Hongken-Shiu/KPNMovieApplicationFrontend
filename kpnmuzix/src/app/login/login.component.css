@@ -1,0 +1,56 @@
+.btn-primary:hover {
+    background-color: #0056b3;
+  } 
+  .gradient-custom {
+    /* fallback for old browsers */
+    background: #f093fb;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgb(155, 9, 9), rgb(8, 142, 19));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgb(47, 22, 207), rgb(157, 168, 114))
+  }
+
+.card-body {
+  padding: 0;
+}
+
+.mb-4,
+.pb-2,
+.pb-md-0,
+.mb-md-5 {
+  margin-bottom: 0 !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  font-size: x-large;
+  margin-left: 270px;
+}
+
+.form-outline {
+  margin-top: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.btn-ash {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #aaa;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} 

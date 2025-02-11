@@ -1,0 +1,113 @@
+
+<!-- <section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12 col-lg-9 col-xl-7">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                  <div class="card-body p-4 p-md-5">
+                      <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><b>LOGIN</b></h3>
+                      <form [formGroup]="LoginForm" (ngSubmit)="loggedin()">
+                          <div class="row">
+                              <div class="form-outline">
+                                  <label class="form-label" for="Email">EMAIL ID</label>
+                                  <input type="text" class="form-control form-control-lg" formControlName="email" />
+                              </div>
+                              <span class="text-danger" *ngIf="getEmail.invalid && getEmail.touched ">Valid Email Is
+                                  Required, </span>
+                              <span class="text-danger" *ngIf="getEmail.invalid && getEmail.dirty ">This Email Is
+                                  Invalid</span>
+                          </div>
+                          <div class="row">
+                              <div class="form-outline">
+                                  <label class="form-label" for="Password">PASSWORD</label>
+                                  <input type="password" formControlName="password"
+                                      class="form-control form-control-lg" />
+                              </div>
+                              <span class="text-danger" *ngIf="getPassword.invalid && getPassword.touched ">Password
+                                  Is Required </span>
+                          </div>
+                          <div class="mt-4 pt-2">
+                            <button class="btn btn-primary btn-lg" type="submit" [ngClass]="{'btn-ash': !LoginForm.valid, 'btn-primary': LoginForm.valid}" [disabled]="!LoginForm.valid">Login</button>
+
+                          </div>
+                      </form>
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"> <b>Login</b> </h3>
+              <form [formGroup]="LoginForm" (ngSubmit)="loggedin()">
+                <div class="row">
+                  <div class="form-outline">
+                    <label class="form-label" for="Email">EMAIL ID</label>
+                    <input type="email" class="form-control form-control-lg" formControlName="email" />
+
+                  </div>
+                  <span class="text-danger" *ngIf="LoginForm.get('email')?.invalid && LoginForm.get('email')?.touched">Valid Email Is Required</span>
+                </div>
+                <div class="row">
+                  <div class="form-outline">
+                    <label class="form-label" for="Password">PASSWORD</label>
+                    <input type="password" formControlName="password" class="form-control form-control-lg" />
+                  </div>
+                  <span class="text-danger" *ngIf="LoginForm.get('password')?.invalid && LoginForm.get('password')?.touched">Password Is Required</span>
+                </div>
+                <div class="mt-4 pt-2">
+                  <button class="btn btn-primary btn-lg" type="submit" [disabled]="LoginForm.invalid">Login</button>
+                  <!<button>{{ authService.isLoggedIn | async ? 'Logout' : 'Login' }}</button> -->
+                <!-- </div> -->
+              <!-- </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div> -->
+<!-- </section>  -->
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><b>LOGIN</b></h3>
+              <form [formGroup]="LoginForm" (ngSubmit)="loggedin()">
+                <div class="row">
+                  <div class="form-outline">
+                    <label class="form-label" for="Email">EMAIL ID</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="email" />
+                  </div>
+                  <span class="text-danger" *ngIf="getEmail.invalid && getEmail.touched ">Valid Email Is
+                      Required, </span>
+                  <span class="text-danger" *ngIf="getEmail.invalid && getEmail.dirty ">This Email Is
+                      Invalid</span>
+                </div>
+                <div class="row">
+                  <div class="form-outline">
+                    <label class="form-label" for="Password">PASSWORD</label>
+                    <input type="password" formControlName="password"
+                        class="form-control form-control-lg" />
+                  </div>
+                  <span class="text-danger" *ngIf="getPassword.invalid && getPassword.touched ">Password
+                      Is Required </span>
+                </div>
+                <div class="mt-4 pt-2">
+                    <!-- <button class="btn btn-primary btn-lg" type="submit"(click)="loggedin()" [disabled]="!LoginForm.valid">Login</button> -->
+                    <button class="btn btn-primary btn-lg" type="submit" (ngSubmit)="loggedin()" [ngClass]="{'btn-ash': !LoginForm.valid, 'btn-primary': LoginForm.valid}" [disabled]="!LoginForm.valid">Login</button>
+                </div>
+                <div style="margin-top: 5px;margin-left: 200px; font-size: 15px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p>Don't have a account? <a href="/register">Register</a></p>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- </div>
+  </section> -->
+

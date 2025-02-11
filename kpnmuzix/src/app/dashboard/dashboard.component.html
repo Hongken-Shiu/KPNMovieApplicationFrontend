@@ -1,0 +1,86 @@
+<section class="vh-900 gradient-custom"> 
+<div class="header">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../assets/1.jpg" class="d-block w-100" alt="..." height="530px">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/8.jpg" class="d-block w-100" alt="..." height="530px">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/2.jpg" class="d-block w-100" alt="..." height="530px">
+      </div> 
+ 
+      <div class="carousel-item">
+        <img src="../../assets/6.jpg" class="d-block w-100" alt="..." height="530px">
+      </div> 
+      <div class="carousel-item">
+        <img src="../../assets/9.jpg" class="d-block w-100" alt="..." height="530px">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/11.jpg" class="d-block w-100" alt="..." height="530px">
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> 
+</div>
+<div class="select">
+  <select [(ngModel)]="selectedLanguage" (change)="changeLanguage($event)">
+    <option *ngFor="let lang of availableLanguages" [value]="lang.iso_639_1">{{ lang.english_name }}</option>
+  </select>
+</div>
+<app-search></app-search>
+<div class="container m-6 ">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let item of movieData;let i=index">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item?.title}}</mat-card-title>
+          <mat-card-subtitle>{{item?.release_date}}</mat-card-subtitle>
+         
+          <!-- <a mat-icon-button [routerLink]="['/view-one-movie', item.id]"> <mat-icon>more_vert</mat-icon></a> -->
+          <!-- <mat-menu #menu="matMenu" xPosition="before">
+            <a mat-menu-item [routerLink]="'viewonemovie' + item?.id">ViewMovie</a>
+          </mat-menu>  -->
+        </mat-card-header>
+        <img mat-card-image [routerLink]="['/view-one-movie', item.id]"routerLinkActive="active" src="https://image.tmdb.org/t/p/w300{{item?.poster_path}}" alt="{{item?.title}}">
+        <!-- <mat-card-content class="content">
+    <p class="overview">{{item?.overview}}</p>
+  </mat-card-content> -->
+  <!-- <mat-menu #menu="matMenu" xPosition="before">  
+  </mat-menu> -->
+  <mat-card-actions>
+    <button mat-icon-button color="white" (click)="toggleLike(item)" matTooltip="ADD TO FAVOURITES">
+      <mat-icon style="margin-left: 100px;" [ngClass]="{'red-icon': item.liked}" color="white">favorite
+      </mat-icon>
+    </button>
+    <!-- <button mat-button [routerLink]="['/view-one-movie', item.id]">View Details</button> -->
+  </mat-card-actions> 
+      </mat-card>
+    </div>
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+      <button [disabled]="currentPg<=1" (click)="decreasePage()" mat-raised-button class="prev-next-btn">
+        <mat-icon>navigate_before</mat-icon> PREVIOUS PAGE </button>
+      <button [disabled]="currentPg>=this.totalPages" (click)="increasePage()" mat-raised-button
+        class="prev-next-btn">NEXT PAGE <mat-icon>navigate_next</mat-icon>
+      </button>
+    </div>
+  </div> 
+  <div  class="button-container">
+    <!-- <button mat-raised-button color="primary" (click)="scrollToTop()">Go to Top</button> -->
+    <button type="button" class="btn btn-success"(click)="scrollToTop()"><mat-icon>keyboard_arrow_up</mat-icon></button>
+  </div>
+</div>
+
+</section>

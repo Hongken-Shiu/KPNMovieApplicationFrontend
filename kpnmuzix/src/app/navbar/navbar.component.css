@@ -1,0 +1,34 @@
+.container{
+    font-size:x-large;
+   
+}
+.navbar-nav .nav-item .nav-link {
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+  }
+  .navbar-brand:hover {
+    background-color: lightslategray;
+    border-color: lightslategray;
+    border: 1px solid transparent;
+    border-radius: 5px;
+  }
+  .navbar-nav .nav-item .nav-link:hover {
+    cursor: pointer;
+    background-color: lightslategray;
+    border-color: lightslategray;
+  }
+  .logout-container {
+    display: flex;
+    align-items: center;
+  }
+  .logout-text {
+    margin-left: 5px;
+  }
+  /* .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  } */ 

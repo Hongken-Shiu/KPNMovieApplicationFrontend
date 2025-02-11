@@ -1,0 +1,39 @@
+.movie-card {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: auto;
+  }
+
+  .heading
+{
+  padding-top: 10px;
+}
+  
+  .movie-details {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    color:white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .movie-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 100px; */
+    background-color: #f2f2f2;
+    border-top: 1px solid #ddd;
+  }
+  
+.head{
+  margin-left: 660px;
+  color:black;
+  padding-top: 10px; 
+}

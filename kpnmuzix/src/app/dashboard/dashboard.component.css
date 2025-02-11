@@ -1,0 +1,59 @@
+.example-card {
+    max-width: 100%;
+    height: 100%;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content>mat-card { 
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 15px;
+    }
+}
+.prev-next-btn { 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 20px; 
+    margin: 0 10px; 
+}
+
+.prev-next-btn:hover { 
+    background-color:chocolate; 
+    color: white; 
+}
+
+.prev-next-btn:disabled { 
+    background-color: #cccccc; 
+    color: #666666; 
+}
+.red-icon {
+    color: red !important;
+  }
+  select{
+  margin-left: 580px;
+  margin-top: 10px;
+  height: 50px;
+  }
+
+  .btn-success {
+    margin-left: 100%;
+  } 
+
+
+  

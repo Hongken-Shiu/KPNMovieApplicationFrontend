@@ -1,0 +1,31 @@
+  <!-- <div class="searchbar">
+    <input
+      placeholder="Search for a Movie"
+      [(ngModel)]="search"
+      (ngModelChange)="searchDataEvent()"
+      id="search-input"
+    />
+    <button id="button-input" (click)="searchDataEvent()"> SEARCH</button>
+    <button id="button-input" (click)="clearDataEvent()">CLEAR</button>
+  </div> 
+     -->
+     <div class="searchbar">
+        <input
+          placeholder="Search for a Movie"
+          [(ngModel)]="search"
+          (ngModelChange)="searchDataEvent()"
+          id="search-input"
+        />
+        <button id="button-input" (click)="searchDataEvent()"> <mat-icon>search</mat-icon></button>
+        <button id="button-input" (click)="clearDataEvent()">CLEAR</button>
+      </div>
+      
+      <!--  <div *ngIf="filteredMovies.length > 0; else noMoviesFound">
+        <div class="movie-card" *ngFor="let movie of filteredMovies">
+          <img mat-card-image src="https://image.tmdb.org/t/p/w300{{movie?.poster_path}}" alt="{{movie?.title}}"> -->
+          <!-- </div>
+        </div>
+      
+      <ng-template #noMoviesFound>
+        <p>No movies found</p>
+      </ng-template>  --> 

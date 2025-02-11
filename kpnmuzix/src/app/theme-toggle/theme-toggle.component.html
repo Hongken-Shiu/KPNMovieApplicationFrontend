@@ -1,0 +1,29 @@
+<mat-button-toggle [matMenuTriggerFor]="themeMenu">
+    <mat-icon [style.color]="'white'" [style.margin]="'8px 20px'">palette</mat-icon>
+  </mat-button-toggle>
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item (click)="selectTheme('default')">
+      <mat-icon>brightness_auto</mat-icon>
+      <span>Default</span>
+    </button>
+    <button mat-menu-item (click)="selectTheme('light')">
+      <mat-icon>wb_sunny</mat-icon>
+      <span>Light</span>
+    </button>
+    <button mat-menu-item (click)="selectTheme('dark')">
+      <mat-icon>brightness_3</mat-icon>
+      <span>Dark</span>
+    </button>
+    <button mat-menu-item (click)="selectTheme('pink')">
+      <mat-icon>brightness_high</mat-icon>
+      <span>Pink</span>
+    </button>
+    <button mat-menu-item (click)="selectTheme('green')">
+      <mat-icon>eco</mat-icon>
+      <span>Green</span>
+    </button>
+    <button mat-menu-item (click)="selectTheme('blue')">
+      <mat-icon>waves</mat-icon>
+      <span>Blue</span>
+    </button>
+  </mat-menu>

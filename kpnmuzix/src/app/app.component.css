@@ -1,0 +1,45 @@
+.light {
+  background-color: #d2f7ff;
+  color: #4edb31;
+}
+
+.dark {
+  background-color: #333333;
+  color: #00c0a0;
+}
+
+.pink {
+  background-color: #ff80ab;
+  color: #60072f;
+}
+
+.green {
+  background-color: #4caf50;
+  color: #05750a;
+}
+
+.blue {
+  background-color: #2196f3;
+  color: #1e0784;
+}
+.default {
+  /* fallback for old browsers */
+  background: #f093fb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom right, rgb(155, 9, 9), rgb(8, 142, 19));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom right, rgb(47, 22, 207), rgb(157, 168, 114))
+} 
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.content {
+  padding-top: 60px;
+}
